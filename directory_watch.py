@@ -4,7 +4,7 @@ from watchdog.events import FileSystemEventHandler
 import os.path
 from datetime import datetime
 
-dir= "../Pictures/"
+dir= "../files/"
 logfile_name = dir + "log.txt"
 #check if logfile exists
 file_exists = os.path.exists(logfile_name)
