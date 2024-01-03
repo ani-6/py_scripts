@@ -12,15 +12,16 @@ def login_to_mega(email,password):
         print('Trying to login in your account')
         mega = Mega()
         m = mega.login(email, password)
-        print('Login successfull')
+        print('Login successful')
         return m
     except:
         print('Bad login!')
         sys.exit(0)
 
 def get_all_files_to_upload():
+    print('Listing files to upload...')
     try:
-        dir_list = os.listdir('imgs')
+        dir_list = [f for f in os.listdir(directory) if not f.startswith('.')]
         return dir_list
     except Exception as error:
         print('Error: ',error)
